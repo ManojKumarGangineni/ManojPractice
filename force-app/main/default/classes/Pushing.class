@@ -1,4 +1,4 @@
 public class Pushing{
 
-    
+    public static string val = 'NewValues\' ;
 }
