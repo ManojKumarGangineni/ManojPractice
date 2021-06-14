@@ -1,0 +1,39 @@
+<template>
+            <lightning-card title="Conditional Rendering">
+                <div class="slds-m-top_x-large" >
+                    <lightning-button variant="brand" 
+                                    label="Brand"
+                                    title="Looks like a link"
+                                    onclick={handleClick} 
+                                    class="slds-m-left_x-small">
+                        </lightning-button>
+                    </div>
+
+            <template if:true={isvisible} >
+                <p> this is conditional rendering to check if this templatee is correct or not </p>
+            </template>
+            <template if:false={isvisible} >
+            <div>Please click on the button to check if its working or not </div>
+            </template>
+            </lightning-card>
+
+
+            <lightning-card title = 'ConditionalRenderingCheckBox'>
+                <div>
+            <lightning-input type = 'checkbox' label = 'Hide and Display' onclick ='{checkBoxHandler}' >
+            </lightning-input>
+            </div>
+            <div>
+
+            <template if:true = {ischecked}>
+                <p> Nice you're checkbox is checked</p>
+            </template>
+            <template if:false = {ischecked}>
+              <p> nothing to display</p>
+            </template>
+        </div>
+
+           
+
+            </lightning-card>
+</template>

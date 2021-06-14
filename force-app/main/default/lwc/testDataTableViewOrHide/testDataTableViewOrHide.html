@@ -1,0 +1,17 @@
+<template>
+<lightning-card  title="This is Conditional Rendering">
+   
+ <lightning-button label="Neutral" variant="Brand"
+        onclick={handleClick} 
+        class="slds-m-left_x-mall" >
+       
+ </lightning-button>
+    
+ <template for:each={familyList} for:item="list" if:true={isFamilyAvailable}  >
+    <li key ={list.Id} >{list.name}</li>
+</template>
+ <template if:false = {isFamilyAvailable} >
+     <p> currently we don't display the data. Please click on the button</p>
+ </template>
+</lightning-card>
+</template>

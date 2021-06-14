@@ -1,0 +1,49 @@
+<template>
+<div>Hello This is Manoj </div>
+<div>{value}</div>
+<!-- <div>
+<input type = 'text' onkeyup = {getUpdateValue} />
+
+</div> -->
+    <lightning-card  title="NewCardDetails">
+    <!-- <lightning-button label="New" slot="actions"></lightning-button> -->
+    <div class="slds-p-around_medium lgc-bg">
+            <lightning-input type="text" label="Enter the Name and Family Name " onkeyup={getUpdateValue}></lightning-input>
+        <div class="slds-p-bottom_none" >
+            <div class="slds-text-color_success">
+                Object details fetch of Name is {Name} and Family name : {ParentName}
+             </div>
+            
+        </div> 
+    </div>
+
+</lightning-card>
+
+<lightning-card  title="@ Track LWC Properties">
+    <!-- <lightning-button label="New" slot="actions"></lightning-button> -->
+    <div class="slds-p-around_medium lgc-bg">
+            <lightning-input type="text" label="Please enter the your city Name " onkeyup={getCityValue} ></lightning-input>
+        <div class="slds-p-bottom_none" >
+            <div class="slds-text-color_success">
+               Manoj City is {ManojObjVal.city} and Name is familyListArray.
+             </div>
+            
+        </div> 
+    </div>
+
+</lightning-card>
+<!-- GETTER Property is ussed to perform operation dynamically Like wise validtion,caluclations  etc-->
+<lightning-card  title="Getter Properties">
+    <!-- <lightning-button label="New" slot="actions"></lightning-button> -->
+    <div class="slds-p-around_medium lgc-bg">
+  <div class="slds-p-bottom_none" >
+            <div class="slds-text-color_success">
+               Manoj Familyname is  is {familyList} 
+             </div>
+            <div>Calculate {calculateNumber}</div>
+        </div> 
+    </div>
+
+</lightning-card>
+
+</template>
