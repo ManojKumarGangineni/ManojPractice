@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title = 'QuerySelector Component'>
+        <div class = 'slds-var-m-around_medium'>
+            <h1>This is the h1 tag to fetch</h1> 
+            <div>First <slot name="task1">Task 1</slot></div>
+            <div>Second <slot name="task2">Task 2</slot></div>
+        <!-- <lightning-button variant="brand" 
+                                label="Brand" 
+                                onclick={fetchElements} 
+                                class="slds-m-left_x-small">
+                            
+        </lightning-button> -->
+    <button onclick ={fetchElements}> fetch </button>
+    </div>
+
+    </lightning-card>
+</template>
