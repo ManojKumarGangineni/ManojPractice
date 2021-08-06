@@ -1,0 +1,3 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+<p class = "Style" > Hello World this is manoj</p>
+</aura:component>

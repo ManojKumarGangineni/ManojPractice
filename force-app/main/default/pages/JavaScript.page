@@ -1,0 +1,34 @@
+<apex:page >
+    function addAttachment(){
+    var reader = new FileReader();
+    var attachFile = document.getElementById('newAttFiles').files[0];
+    if(attachFile == undefined){
+        alert('Attachment required to proceed');
+        return;
+    }
+ 
+    if(attachFile.size > 26214400){  //Where 26214400 is byte equivalent of 25MB
+        alert('Attachment size not supported');
+    }
+ 
+    reader.onload = function(e) {
+        var document = new sforce.SObject('Document');  // create document object
+        document.Name = attachFile.name;
+        document.Body = (new sforce.Base64Binary(e.target.result)).toString();;
+        document.FolderId ='0056F000006CMNh' ;  //Where FolderId is the ID of record to which you want to add your Document.
+            var result = sforce.connection.create([document]); 
+             if(result[0].getBoolean("success")){  
+             	var documentId=result[0].id;  // get document object id.
+            	alert('file added successfully'+documentId);
+            }else{
+            	alert('error occured');
+        	}
+    };
+    reader.readAsBinaryString(attachFile);
+ 
+}
+<apex:form >
+<input type="file" id="newAttFiles"/> <br />
+<apex:commandButton value="Upload File" onclick="addAttachment();" reRender="" />
+</apex:form>
+</apex:page>

@@ -1,0 +1,22 @@
+<aura:component >
+  <aura:attribute type = "integer" Name="inputone" />
+    <aura:attribute type="integer" Name = "Inputtwo" />
+    <aura:attribute type="integer" Name = "output" />
+    <aura:attribute type="List" name= "mapvar" />
+    
+    
+    Output value is {!v.output} 
+    
+    <br/>
+    <br/>
+    <lightning:input value="{!v.inputone}" type="integer" label = "Enter First Value" />
+     <lightning:input value="{!v.Inputtwo}" type="integer" label = "Enter second Value"/>
+    <lightning:Button label = "Additon" onclick="{!c.add}" variant= "Brand" />
+     <lightning:Button label = "Sub" onclick="{!c.sub}" variant= "Brand" />
+     <lightning:Button label = "Multiplication" onclick="{!c.mul}" variant= "Brand" />
+     <lightning:Button label = "Division" onclick="{!c.div}" variant= "Brand" /> 
+    <lightning:Button label="Map Button" onclick="{!c.MapClick}" />
+    <aura:iteration items= "{!v.mapvar}" var = "map" >
+        Map key value is : {!map.key} and value is {!map.value} <br/>
+    </aura:iteration>
+</aura:component>

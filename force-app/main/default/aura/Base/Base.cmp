@@ -1,0 +1,3 @@
+<aura:component extensible="True" >
+	{!v.body}
+</aura:component>

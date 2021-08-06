@@ -1,0 +1,4 @@
+<aura:event type="COMPONENT" description="Event template" >
+    
+    <aura:attribute type = "Id" name = "CarId" />
+</aura:event>

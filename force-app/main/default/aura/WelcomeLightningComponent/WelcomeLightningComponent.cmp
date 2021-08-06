@@ -1,0 +1,9 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	<div>
+     Welcome to Lightning environment
+    </div>
+    <aura:attribute name = "Display" type = "String" default = "Test1" />
+    
+   {!v.Display} 
+
+</aura:component>

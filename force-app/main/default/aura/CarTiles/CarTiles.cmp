@@ -1,0 +1,17 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+    <aura:attribute name = "car" type ="Car__c" access = "Public" 
+              default = "{'sobjectType'	:'Car__c',
+                               'Name'			:'Manoj',
+                               'Picture__c'		:'/resource/Cars/luxury/ford_mustang.jpeg'}" />
+    <aura:attribute name="selected" type = "boolean" default = 'false' access = "Public"  />
+    <aura:registerEvent name = "onCarSelect" type ="c:CarSelect" />
+    
+    
+   <lightning:button variant = "Neutral" class="{!v.selected ? 'selected tile' : 'tile'}" onclick = "{!c.onCarClick}">
+    <div style = "{# 'background-image:url(' +v.car.Picture__c +' )' }" class ="innertile" >
+     <div class ="lower-third" >
+        <h1 class = "sldc-truncate"> {!v.car.contact__r.Name}</h1>
+        </div>
+        </div>
+  </lightning:button>  
+</aura:component>

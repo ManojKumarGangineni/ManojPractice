@@ -1,0 +1,25 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    
+    <p class ="Firststyle"> Hello world this is first paragraph Style Sheets </p>
+    <div>
+        <p class = "secondstyle" > this is second paragraph inside div class</p>
+    </div>
+    <div>
+        <div>
+            <p  class = "threestyle"> this is third paragraph text nested inside div</p>
+        </div>
+    </div>
+    <br>
+    </br> 
+    <div>
+        <p class = "ForthStyleSheet" style="text-overflow:clip;"> This is fourth Paragraph which includes some sytle sheets and working on hover </p>
+    </div>
+    <!-- <p><lightning:formattedText value="This is first Lightning component" /></p> -->
+    
+    
+    <!-- ************** diff between HTML component and Lightning Component *************  -->
+    <button> HTML Button </button> <br/> <br/>
+    
+    <lightning:button variant="Brand" label="Lightning Button" /> 
+    
+</aura:component>

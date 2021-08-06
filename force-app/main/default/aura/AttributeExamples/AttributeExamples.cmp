@@ -1,0 +1,8 @@
+<aura:component >
+    <aura:attribute name = 'StrVal' type = "String" default = "Test Values" />
+    Display String value    {!v.StrVal} <br/> <br/>
+    <aura:attribute name = "age" type = "string" />
+    <lightning:input type="string" aura:id = "Findme" label = "Enter your age " value = "{!v.age}" />
+    <lightning:button label = "Press Button" onclick = "{!c.onclick}" />
+    
+</aura:component>

@@ -1,0 +1,26 @@
+.THIS.Firststyle{   
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;  
+}
+.THIS .secondstyle
+{
+    font-style : bold;
+    color: blue;
+}
+.THIS .threestyle
+{
+    font-style : bold; 
+    color: green;
+    
+}
+.THIS .ForthStyleSheet
+{
+    white-space : nowrap;
+    width : 70 px;
+    overflow : hidden;
+    border  :1px solid #0000FF;
+}
+.THIS .ForthStyleSheet:hover
+{
+    text-overflow : inherit;
+    overflow:visible;
+}

@@ -1,0 +1,35 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <div class = "c-container">
+        <lightning:layout >
+            <lightning:layoutItem padding="around-medium">
+                <div class = "Headercolumn">
+                    <p class="field-title" title="Field 1">Field 1</p>
+                    <p> Name</p>
+                </div>
+            </lightning:layoutItem>
+            <lightning:layoutItem padding="around-medium">
+                <div class = "Headercolumn">
+                    <p class="field-title" title="Field 2">Field 2
+                        <lightning:buttonIcon iconName="utility:down" variant="border-filled" size="small"/></p>
+                    <p> Eligibility</p>
+                </div>
+            </lightning:layoutItem>
+            <lightning:layoutItem padding="around-medium">
+                <div class = "Headercolumn">
+                    <p class="field-title" title="Field 3">Field 3</p>
+                    <a href="https://www.w3schools.com">Click on Website</a> 
+                    
+                </div>
+            </lightning:layoutItem>
+            
+            <lightning:layoutItem padding="around-medium">
+                <div class = "Headercolumn">
+                    <p class = "field title" title = "Field 4"> Field 4</p>
+                    <p> <span style="color:blue"> Address </span> </p>
+                </div>
+                
+            </lightning:layoutItem>
+            
+        </lightning:layout> 
+    </div>
+</aura:component>
